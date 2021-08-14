@@ -2,10 +2,15 @@
   "name": "abeg",
   "version": "1.0.0",
   "main": "index.js",
-  "private": true,
   "repository": "https://github.com/gbenga504/abeg.git",
   "author": "Anifowoshe Gbenga <daveanifowoshe@ymail.com>",
   "license": "MIT",
+  "bin": {
+    "abeg": "bin/abeg"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "format": "prettier --write \"**/*.+(js|json|md)\"",
     "format:check": "prettier --list-different \"**/*.{js,json,md}\""
@@ -25,5 +30,8 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "dependencies": {
+    "esm": "^3.2.25"
   }
 }
